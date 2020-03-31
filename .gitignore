@@ -4,5 +4,6 @@
 *.plist
 *.shsh
 *.shsh2
+resources/
 saved/
 tmp/
