@@ -1,0 +1,8 @@
+*.bbfw
+*.ipsw
+*.json
+*.plist
+*.shsh
+*.shsh2
+saved/
+tmp/
