@@ -5,7 +5,7 @@ This firmware branch has:
 
 - Firmware keys provided for futurerestore to use
 - URLs for iOS 8.4.1, 6.1.3, and latest firmwares for devices with baseband
-- iBSS IV and Keys, and IPSW SHA-1 hashes for iOS 8.4.1 and 6.1.3
+- iBSS IV and Keys, and IPSW SHA1sum for iOS 8.4.1 and 6.1.3
 
 Raw files here can be used like an API as well, here are some examples:
 
