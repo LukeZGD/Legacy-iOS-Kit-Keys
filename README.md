@@ -1,3 +1,3 @@
-# iOS-OTA-Downgrader-Keys
-### Other files for iOS-OTA-Downgrader
+# Legacy-iOS-Kit-Keys
+### Other files for Legacy iOS Kit
  
