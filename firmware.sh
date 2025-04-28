@@ -5,7 +5,8 @@
 #         iPod1,1 iPod2,1 iPod3,1 iPod4,1 iPod5,1)
 #devices=(iPhone8,1 iPhone8,2 iPhone8,4 iPhone9,1 iPhone9,2 iPhone9,3 iPhone9,4 iPad5,1 iPad5,2 iPad5,3 iPad5,4 iPod9,1)
 #devices=(iPhone7,1 iPhone7,2 iPod7,1)
-devices=(iPhone6,1 iPhone6,2 iPad4,1 iPad4,2 iPad4,3 iPad4,4 iPad4,5 iPad4,6 iPad4,7 iPad4,8 iPad4,9)
+#devices=(iPhone6,1 iPhone6,2 iPad4,1 iPad4,2 iPad4,3 iPad4,4 iPad4,5 iPad4,6 iPad4,7 iPad4,8 iPad4,9)
+devices=(iPod1,1 iPod2,1)
 
 for device in ${devices[@]}; do
     echo $device
@@ -19,6 +20,10 @@ for device in ${devices[@]}; do
         builds+=($(echo "$json" | jq -r ".firmwares[$i].buildid"))
         ((i++))
     done
+    case $device in
+        iPod1,1    ) builds+=(5A347 5B108 5C1 5F137 5G77 5H11);&
+        iPod[12],1 ) builds+=(7A341 7C145 7D11 7E18);;
+    esac
 
     pushd $device
     for build in ${builds[@]}; do
