@@ -6,7 +6,8 @@
 #devices=(iPhone8,1 iPhone8,2 iPhone8,4 iPhone9,1 iPhone9,2 iPhone9,3 iPhone9,4 iPad5,1 iPad5,2 iPad5,3 iPad5,4 iPod9,1)
 #devices=(iPhone7,1 iPhone7,2 iPod7,1)
 #devices=(iPhone6,1 iPhone6,2 iPad4,1 iPad4,2 iPad4,3 iPad4,4 iPad4,5 iPad4,6 iPad4,7 iPad4,8 iPad4,9)
-devices=(iPod1,1 iPod2,1)
+#devices=(iPod1,1 iPod2,1)
+devices=(iPad2,2 iPad2,3)
 
 for device in ${devices[@]}; do
     echo $device
@@ -48,6 +49,7 @@ for device in ${devices[@]}; do
             ;;
         esac
         echo $build
+        [[ -d $build ]] && continue
         mkdir $build
         pushd $build
         #curl -L "https://api.m1sta.xyz/wikiproxy/$device/$build" -o index.html
