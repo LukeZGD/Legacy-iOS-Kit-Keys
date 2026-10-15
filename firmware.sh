@@ -16,6 +16,10 @@ devices=(
     iPad6,3 iPad6,4 iPad6,7 iPad6,8 iPad6,11 iPad6,12 iPad7,1 iPad7,2 iPad7,3 iPad7,4 iPad7,5 iPad7,6 iPad7,11 iPad7,12
 
     AppleTV2,1 AppleTV3,1 AppleTV3,2 AppleTV5,3
+
+    iPhone11,2 iPhone11,4 iPhone11,6 iPhone11,8 iPhone12,1 iPhone12,3 iPhone12,5 iPhone12,8
+    iPad8,1 iPad8,2 iPad8,3 iPad8,4 iPad8,5 iPad8,6 iPad8,7 iPad8,8 iPad8,9 iPad8,10 iPad8,11 iPad8,12
+    iPad11,1 iPad11,2 iPad11,3 iPad11,4 iPad11,6 iPad11,7 iPad12,1 iPad12,2
 )
 
 # --- Helper Functions ---
@@ -132,6 +136,7 @@ for device in "${devices[@]}"; do
         iPad[23456],* | iPhone[45678],* | iPod[57],1 ) builds+=(13A4254v 13A4280e 13A4293f 13A4293g 13A4305g 13A4325c 13A340 13A341 13B5110e 13B5119e 13B5130b 13B136 13B137 13B139 13C5055d 13C5060d 13C71 13C75 13D11 13D14 13E5181d 13E5181f 13E5191d 13E5200d 13E5214d 13E5225a 13E5231a 13E5233a 13E5234a 13F51a 13F61 13F65 13F68 13G12 13G21 13G29 13G33 13G34);;&
 
         iPad[67],* | iPhone[89],* | iPhone10,* | iPod9,1 ) builds+=(18C65);;&
+        iPhone1[12],* | iPad8,* | iPad1[01],* ) builds+=(18A5342e);;&
     esac
 
     # Deduplicate builds array using sort -u
