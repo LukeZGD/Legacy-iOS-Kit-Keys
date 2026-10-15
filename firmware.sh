@@ -136,7 +136,7 @@ for device in "${devices[@]}"; do
         iPad[23456],* | iPhone[45678],* | iPod[57],1 ) builds+=(13A4254v 13A4280e 13A4293f 13A4293g 13A4305g 13A4325c 13A340 13A341 13B5110e 13B5119e 13B5130b 13B136 13B137 13B139 13C5055d 13C5060d 13C71 13C75 13D11 13D14 13E5181d 13E5181f 13E5191d 13E5200d 13E5214d 13E5225a 13E5231a 13E5233a 13E5234a 13F51a 13F61 13F65 13F68 13G12 13G21 13G29 13G33 13G34);;&
 
         iPad[67],* | iPhone[89],* | iPhone10,* | iPod9,1 ) builds+=(18C65);;&
-        iPhone1[12],* | iPad8,* | iPad1[01],* ) builds+=(18A5342e);;&
+        iPhone1[12],* | iPad8,* | iPad11,[1234] ) builds+=(18A5342e);;&
     esac
 
     # Deduplicate builds array using sort -u
